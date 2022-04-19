@@ -11,9 +11,9 @@ const App = () => {
     return (
         <div className="App">
             <Header setShowNav={setShowNav} />
-            <div className="app__container border border-info">
+            <div className="app__container">
                 <Sidebar show={showNav} setShowNav={setShowNav} />
-                <Container fluid className="app__main border border-warning">
+                <Container fluid className="app__main">
                     <Home />
                 </Container>
             </div>
