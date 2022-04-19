@@ -1,0 +1,59 @@
+@import "../../reset.scss";
+
+.video {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &__top {
+        position: relative;
+        margin-bottom: 0.5rem;
+
+        img {
+            width: 100%;
+        }
+        span {
+            position: absolute;
+
+            bottom: 0.3rem;
+            right: 0.3rem;
+
+            padding: 0.2rem;
+            background: #080808;
+            border-radius: 3px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.1rem;
+        color: #ffffff;
+
+        @include line-clamp(1);
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+    }
+
+    &__channel {
+        display: flex;
+        align-items: flex-start;
+        margin: 0.5rem 0;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            border-radius: 100%;
+            margin-right: 0.5rem;
+            cursor: pointer;
+        }
+        p {
+            margin-bottom: 0; //remove default bottom margin
+        }
+    }
+}

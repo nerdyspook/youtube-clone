@@ -14,7 +14,7 @@ const Header = ({ setShowNav }) => {
             />
             <img
                 src="http://pngimg.com/uploads/youtube/youtube_PNG2.png"
-                alt=""
+                alt="logo"
                 className="header__logo"
             />
 
