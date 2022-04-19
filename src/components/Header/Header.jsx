@@ -4,10 +4,14 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ setShowNav }) => {
     return (
         <div className="header border border-dark">
-            <FaBars className="header__menu" size={26} />
+            <FaBars
+                className="header__menu"
+                size={26}
+                onClick={() => setShowNav((prevValue) => !prevValue)}
+            />
             <img
                 src="http://pngimg.com/uploads/youtube/youtube_PNG2.png"
                 alt=""
