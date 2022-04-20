@@ -5,21 +5,38 @@ import Home from "./Pages/Home/Home";
 import "./App.scss";
 import { useState } from "react";
 import Login from "./Pages/Login/Login";
+import Search from "./Pages/Search/Search";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Error from "./Pages/Error/Error";
 
-const App = () => {
+const Layout = () => {
     const [showNav, setShowNav] = useState(false);
 
     return (
-        <div className="App">
-            {/* <Header setShowNav={setShowNav} />
+        <>
+            <Header setShowNav={setShowNav} />
             <div className="app__container">
                 <Sidebar show={showNav} setShowNav={setShowNav} />
                 <Container fluid className="app__main">
-                    <Home />
+                    <Outlet />
                 </Container>
-            </div> */}
+            </div>
+        </>
+    );
+};
 
-            <Login />
+const App = () => {
+    return (
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="home" element={<Home />} />
+                    <Route path="search" element={<Search />} />
+                </Route>
+                <Route path="/auth" element={<Login />} />
+                <Route path="*" element={<Error />} />
+            </Routes>
         </div>
     );
 };
