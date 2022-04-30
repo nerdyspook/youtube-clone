@@ -1,0 +1,55 @@
+@import "../../reset.scss";
+
+.videoMetaData {
+    &__top {
+        span {
+            cursor: pointer;
+        }
+    }
+
+    &__channel {
+        border-top: 0.2px solid $border-color;
+        border-bottom: 0.2px solid $border-color;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+
+            &:hover {
+                color: #ffffff;
+            }
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+
+        .channel__desc {
+            margin: 1rem;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__description {
+        @include line-clamp(2);
+
+        &.more {
+            @include line-clamp(100);
+        }
+    }
+
+    .read-more {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #0284c7;
+    }
+}

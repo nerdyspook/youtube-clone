@@ -8,6 +8,7 @@ import Login from "./Pages/Login/Login";
 import Search from "./Pages/Search/Search";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Error from "./Pages/Error/Error";
+import Watch from "./Pages/Watch/Watch";
 
 const Layout = () => {
     const [showNav, setShowNav] = useState(false);
@@ -33,6 +34,7 @@ const App = () => {
                     <Route index element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="search" element={<Search />} />
+                    <Route path="watch/:id" element={<Watch />} />
                 </Route>
                 <Route path="/auth" element={<Login />} />
                 <Route path="*" element={<Error />} />
